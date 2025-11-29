@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<graduates>
+	<graduate
+	  fullName="Іваненко Марія Олександрівна"
+	  faculty="Географічний"
+	  department="Кафедра економічної та соціальної географії"
+	  speciality="Географія"
+	  group="ГЕО-21"
+	  admissionYear="2018"
+	  graduationYear="2022">
+		<careerMove>2022–2023 — асистент кафедри економічної та соціальної географії, КНУ</careerMove>
+		<careerMove>2023–… — аналітик з просторових даних, GeoDataLab</careerMove>
+	</graduate>
+
+	<graduate
+	  fullName="Петренко Олег Сергійович"
+	  faculty="Історичний"
+	  speciality="Історія"
+	  group="ІСТ-45"
+	  admissionYear="2017">
+		<careerMove>2021–2022 — екскурсовод, Музей історії міста Києва</careerMove>
+	</graduate>
+
+	<graduate
+	  fullName="Коваленко Анна Ігорівна"
+	  faculty="Економічний"
+	  department="Кафедра банківської справи"
+	  graduationYear="2021">
+		<careerMove>2021–… — фінансовий аналітик, BankPlus</careerMove>
+	</graduate>
+
+	<graduate
+	  fullName="Сидоренко Дмитро Андрійович"
+	  faculty="Філологічний"
+	  department="Кафедра української мови"
+	  speciality="Прикладна лінгвістика"
+	  group="ФІЛ-33"
+	  graduationYear="2020">
+		<careerMove>2020–2022 — копірайтер-фрилансер</careerMove>
+		<careerMove>2022–… — редактор, Видавництво «Слово»</careerMove>
+	</graduate>
+
+	<graduate
+	  fullName="Мельник Катерина Володимирівна"
+	  faculty="Юридичний"
+	  group="ЮР-19">
+	</graduate>
+</graduates>
