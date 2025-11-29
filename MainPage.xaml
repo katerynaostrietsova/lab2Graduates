@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="lab2Graduates.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Облік випускників">
+
+    <Grid Padding="12"
+          RowDefinitions="Auto, Auto, *, Auto">
+
+        <!-- Заголовок -->
+        <VerticalStackLayout Grid.Row="0" Spacing="2">
+            <Label Text="Лабораторна робота: Обробка XML"
+                   FontAttributes="Bold"
+                   FontSize="18" />
+            <Label Text="Тема: Облік випускників. Пошук (SAX / DOM / LINQ) та XSLT-трансформація."
+                   FontSize="12"
+                   TextColor="Gray" />
+        </VerticalStackLayout>
+
+        <!-- Панель керування -->
+        <Grid Grid.Row="1"
+              Margin="0,10,0,10"
+              RowDefinitions="Auto, Auto, Auto"
+              ColumnDefinitions="*, *">
+
+            <!-- Рядок 1: XML + XSL -->
+            <Grid Grid.Row="0" ColumnSpan="2" ColumnDefinitions="Auto, *, Auto">
+                <Button Grid.Column="0"
+                        x:Name="LoadXmlButton"
+                        Text="Обрати XML"
+                        Clicked="OnLoadXmlClicked" />
+
+                <Label Grid.Column="1"
+                       x:Name="XmlFileLabel"
+                       Text="Файл не вибрано"
+                       VerticalTextAlignment="Center"
+                       Margin="8,0,0,0"
+                       LineBreakMode="TailTruncation" />
+
+                <Button Grid.Column="2"
+                        x:Name="LoadXslButton"
+                        Text="Обрати XSL"
+                        Clicked="OnLoadXslClicked" />
+            </Grid>
+
+            <!-- Рядок 2: стратегія + атрибут + значення -->
+            <Grid Grid.Row="1" ColumnSpan="2"
+                  Margin="0,6,0,0"
+                  ColumnDefinitions="*, *, *">
+
+                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                    <Label Text="Стратегія пошуку:" />
+                    <Picker x:Name="StrategyPicker"
+                            Title="Оберіть стратегію" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" Spacing="2" Margin="6,0,0,0">
+                    <Label Text="Атрибут:" />
+                    <Picker x:Name="AttributePicker"
+                            Title="Оберіть атрибут" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="2" Spacing="2" Margin="6,0,0,0">
+                    <Label Text="Значення атрибуту:" />
+                    <Picker x:Name="AttributeValuePicker"
+                            Title="Оберіть значення" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Рядок 3: ключове слово -->
+            <Grid Grid.Row="2" ColumnSpan="2"
+                  Margin="0,6,0,0"
+                  ColumnDefinitions="Auto, *">
+                <Label Grid.Column="0"
+                       Text="Ключове слово:"
+                       VerticalTextAlignment="Center" />
+                <Entry Grid.Column="1"
+                       x:Name="KeywordEntry"
+                       Placeholder="Пошук в ПІБ, спеціальності, кар'єрі..."
+                       Margin="8,0,0,0" />
+            </Grid>
+        </Grid>
+
+        <!-- Результати -->
+        <VerticalStackLayout Grid.Row="2">
+            <Label Text="Результати пошуку:"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,4" />
+            <Editor x:Name="ResultsEditor"
+                    AutoSize="TextChanges"
+                    IsReadOnly="True"
+                    FontSize="13" />
+        </VerticalStackLayout>
+
+        <!-- Нижні кнопки -->
+        <Grid Grid.Row="3"
+              Margin="0,10,0,0"
+              ColumnDefinitions="*, *, *, *"
+              ColumnSpacing="6">
+
+            <Button Grid.Column="0"
+                    x:Name="SearchButton"
+                    Text="Пошук"
+                    Clicked="OnSearchClicked" />
+
+            <Button Grid.Column="1"
+                    x:Name="TransformButton"
+                    Text="У HTML"
+                    Clicked="OnTransformClicked" />
+
+            <Button Grid.Column="2"
+                    x:Name="ClearButton"
+                    Text="Очистити"
+                    Clicked="OnClearClicked" />
+
+            <Button Grid.Column="3"
+                    x:Name="ExitButton"
+                    Text="Вийти"
+                    Clicked="OnExitClicked" />
+        </Grid>
+    </Grid>
+</ContentPage>
